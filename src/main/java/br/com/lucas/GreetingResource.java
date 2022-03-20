@@ -11,6 +11,6 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public String hello() {
-        return "Hello RESTEasy";
+        return "Hello REST";
     }
 }
