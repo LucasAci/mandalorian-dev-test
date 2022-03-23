@@ -20,24 +20,24 @@ public class TaskService {
     @Inject
     ReactiveRedisClient reactiveRedisClient; 
 
-    Uni<Void> del(String key) {
+    public Uni<Void> del(String key) {
         return reactiveRedisClient.del(Arrays.asList(key))
                 .map(response -> null);
     }
 
-    String get(String key) {
+    public String get(String key) {
         return redisClient.get(key).toString();
     }
 
-    void set(String key, Integer value) {
+    public void set(String key, Integer value) {
         redisClient.set(Arrays.asList(key, value.toString()));
     }
 
-    void increment(String key, Integer incrementBy) {
+    public void task(String key, Integer incrementBy) {
         redisClient.incrby(key, incrementBy.toString());
     }
 
-    Uni<List<String>> keys() {
+    public Uni<List<String>> keys() {
         return reactiveRedisClient
                 .keys("*")
                 .map(response -> {
