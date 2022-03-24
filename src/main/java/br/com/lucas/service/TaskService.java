@@ -29,8 +29,8 @@ public class TaskService {
         return redisClient.get(key).toString();
     }
 
-    public void set(String key, Integer value) {
-        redisClient.set(Arrays.asList(key, value.toString()));
+    public void set(String key, String value) {
+        redisClient.set(Arrays.asList(key, value));
     }
 
     public void task(String key, Integer incrementBy) {

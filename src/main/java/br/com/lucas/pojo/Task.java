@@ -2,9 +2,9 @@ package br.com.lucas.pojo;
 
 public class Task {
 	public String key;
-	public int value;
+	public String value;
 
-	public Task (String key, int value) {
+	public Task (String key, String value) {
 		this.key = key;
 		this.value = value;
 	}

@@ -35,7 +35,7 @@ public class TaskResource {
     @GET
     @Path("/{key}")
     public Task get(@PathParam("key") String key) {
-        return new Task(key, Integer.valueOf(service.get(key)));
+        return new Task(key,service.get(key));
     }
 
     @PUT
