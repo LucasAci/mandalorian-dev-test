@@ -1,15 +1,11 @@
 package br.com.lucas.pojo;
 
 public class Task {
-	public String key;
-	public int value;
+	
+	public Long id;
+	public String name;
+	public String description;
+	public String status; 
 
-	public Task (String key, int value) {
-		this.key = key;
-		this.value = value;
-	}
-
-	public Task () {
-	}
-
+	
 }
